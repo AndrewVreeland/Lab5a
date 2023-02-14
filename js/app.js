@@ -54,8 +54,9 @@ function sumAndMultiply(a, b, c) { //eslint-disable-line
   let sumTotal = sum(sum(a, b)[0], c)[0];
   let productTotal = multiply(multiply(a, b)[0], c)[0];
   return [sumTotal, productTotal, `${a} and ${b} and ${c} sum to ${sumTotal}.`, `The product of ${a} and ${b} and ${c} is ${productTotal}.`];
-  return [sumTotal, productTotal, `${a} and ${b}, ${c} sum to ${sumTotal}`];
 }
+
+
 
 
 // Here is the test for sumAndMultiply(); uncomment it to run it
@@ -76,14 +77,14 @@ Test this function by hand in the console to get it working, and when you think 
 // Write your code here
 let testArray = [2, 3, 4]; //eslint-disable-line
 
-function sumArray() { //eslint-disable-line
-  let sumArrAnswr = sum(sum(testArray[0], testArray[1])[0], testArray[2])[0];
+function sumArray(sumArr) { //eslint-disable-line
+  let sumArrAnswr = sum(sum(sumArr[0], sumArr[1])[0], sumArr[2])[0];
   return [sumArrAnswr, `2,3,4 was passed in as an array of numbers, and ${sumArrAnswr} is their sum.`];
 }
 
 // Here is the test for sumArray(); uncomment it to run it
 
-testSumArray(testArray);
+testSumArray(sumArr);
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. Don't forget to create a new branch for your work on the next question!
 
@@ -99,7 +100,7 @@ Test this function by hand in the console to get it working, and when you think 
 
 // Write your code here
 function multiplyArray(multArr) { //eslint-disable-line
-  let prodArrAnswr = multiply(multiply(testArray[0], testArray[1])[0], testArray[2])[0];
+  let prodArrAnswr = multiply(multiply(multArr[0], multArr[1])[0], testArray[2])[0];
   return [prodArrAnswr, `The numbers 2,3,4 have a product of ${prodArrAnswr}.`];
 }
 
@@ -127,14 +128,16 @@ Test this function by hand in the console to get it working, and when you think 
 // Write your code here
 let testDynamicArray = [1, 2, 3, 4, 5]; //eslint-disable-line
 
-function multiplyAnyArray() { //eslint-disable-line
+function multiplyAnyArray(multAnyArr) { //eslint-disable-line
   let answer6 = 1;
-  for (let i = 0; i < testDynamicArray.length; i++)
-    answer6 = multiply(answer6, testDynamicArray[i])[0];
-  return [answer6, `The numbers ${testDynamicArray} have a product of 120.`];
+  for (let i = 0; i < multAnyArr.length; i++)
+    answer6 = multiply(answer6, multAnyArr[i])[0];
+  return [answer6, `The numbers ${multAnyArr} have a product of 120.`];
 }
 
 // Here is the test for multiplyArray(); uncomment it to run it
-testMultiplyAnyArray(testDynamicArray);
+testMultiplyAnyArray(testArray);
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. You're done! Submit the link to the repo following the instructions in Canvas.
+
+kjnbzkjbdsvkj
